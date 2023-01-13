@@ -1,4 +1,4 @@
-# CodeWars Challenges: <a target="_blank" href="https://github.com/toppirl/codewars" >Visit Here</a> 
+# CodeWars Challenges: <a target="_blank" href="https://www.codewars.com/users/toppirl" >Visit Here</a> 
 
 ![alt tag](https://github.com/toppirl/codewars/blob/main/Codewars%20.png)
 A repository filled with codewars challenges (kata). Currently Push 7 solutions every week.
