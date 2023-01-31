@@ -25,18 +25,18 @@ const a1 = ["live", "strong", "arp", "arp"]
 
 const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 
-// function inArray(array1,array2){
-//     let final = []
-//     array1.sort().forEach(word => {
-//         for(let i =0; i < array2.length; i++) {
-//             if(array2[i].includes(word)) {
-//                 return final.push(word)
-//             }
-//         }
-//     })
-//     console.log(final)
-//     return final
-// }
+function inArray(array1,array2){
+    let final = []
+    array1.sort().forEach(word => {
+        for(let i =0; i < array2.length; i++) {
+            if(array2[i].includes(word)) {
+                return final.push(word)
+            }
+        }
+    })
+    console.log(final)
+    return final
+}
 
 
 // Best Practice
@@ -48,8 +48,6 @@ function inArray(arr1, arr2) {
     });
   }).sort();
 }
-
-
 
 console.log(inArray(a1,a2))
 
