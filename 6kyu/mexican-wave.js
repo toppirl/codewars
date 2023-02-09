@@ -7,11 +7,31 @@
 
 function wave(str){
     let strWave = []
-    const strSplit = str.split('')
     for(let i = 0; i < str.length; i++) {
-        console.log(strSplit[i].toUpperCase())
-        console.log(strSplit.join(''))
+        let strSplit = str.split('')
+        if(strSplit[i] === ' ') {
+            
+        } else {
+            strSplit[i] = strSplit[i].toUpperCase()
+            strWave.push(strSplit.join(''))
+        }
     }
+    console.log(strWave)
+    return strWave
   }
 
-  wave('hello')
+
+
+// Best Practice
+
+function wave(str){
+    let result = [];
+    
+    str.split("").forEach((char, index) => {
+        if (/[a-z]/.test(char)) {
+            result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+        }
+    });
+    
+    return result;
+}
