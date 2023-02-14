@@ -27,7 +27,7 @@ function findOdd(a) {
     }
   }
 
-// Best Practice 
+// Best Practices
 
 function findOdd(A) {
     var obj = {};
@@ -39,3 +39,8 @@ function findOdd(A) {
       if(obj[prop] % 2 !== 0) return Number(prop);
     }
   }
+
+
+function findOdd(arr) {
+  return arr.find((item) => arr.filter(el => el == item).length % 2)
+}
