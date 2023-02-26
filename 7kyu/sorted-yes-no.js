@@ -9,19 +9,17 @@
 
 function isSortedAndHow(array) {
     let sorted = ''
-    for(let i = 0; i < array.length; i++) {
-        for(let j = 1; j < array.length; j++) {
-            console.log(`${array[i] ${array[j]}}`)
-            if (array[i] < array[j]){
-                sorted = 'yes, ascending'
-            } else if(array[i] > array[j]){
+    for(let i = 1; i < array.length; i++) {
+            if (array[i] < array[i-1]){
                 sorted = 'yes, descending'
+            } else if(array[i] > array[i-1]){
+                sorted = 'yes, ascending'
             } else {
-                sorted = 'no'
+                return sorted = 'no'
             }
         }
+        return sorted
     }
-    return sorted
-}
 
-console.log(isSortedAndHow([1,4]))
+
+console.log(isSortedAndHow([1,4,5]))
