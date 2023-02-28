@@ -8,18 +8,35 @@
 // My Solution
 
 function isSortedAndHow(array) {
-    let sorted = ''
-    for(let i = 1; i < array.length; i++) {
-            if (array[i] < array[i-1]){
-                sorted = 'yes, descending'
-            } else if(array[i] > array[i-1]){
-                sorted = 'yes, ascending'
+    let isDescending = true;
+    let isAscending = true;
+    // we are looking ahead so loop from the first element to one before the last element
+    for(let i = 0; i < array.length-1; i++) {
+            if(isDescending && array[i] >= array[i+1]){
             } else {
-                return sorted = 'no'
+                isDescending = false;
             }
         }
-        return sorted
+        for(let i = 0; i < array.length-1; i++) {
+                if(isAscending && array[i] <= array[i+1]){
+                } else {
+                    isAscending = false;
+                }
+            }
+        if(isAscending){
+            return 'yes, ascending'
+        } else if(isDescending){
+            return 'yes, descending'
+        } else {
+            return 'no'
+        }
     }
 
+// Best Practice
 
-console.log(isSortedAndHow([1,4,5]))
+function isSortedAndHow(arr) {
+    return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':
+           arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'
+  }
+
+
