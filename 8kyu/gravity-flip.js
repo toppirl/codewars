@@ -5,6 +5,12 @@
 // My solution
 
 const flip=(d, a)=>{
-    //TODO
-    return 
+   if(d.toLowerCase() === 'l') {
+    console.log('left')
+   } else {
+    console.log('right')
+   }
+    console.log( a.sort())
   }
+
+  flip('R', [3, 2, 1, 2])
