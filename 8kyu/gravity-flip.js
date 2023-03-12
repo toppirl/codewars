@@ -6,11 +6,10 @@
 
 const flip=(d, a)=>{
    if(d.toLowerCase() === 'l') {
-    console.log('left')
+    return a.sort((a,b) => b - a)
    } else {
-    console.log('right')
+    return a.sort()
    }
-    console.log( a.sort())
   }
 
-  flip('R', [3, 2, 1, 2])
+  flip('L', [3, 2, 1, 2])
