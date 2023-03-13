@@ -8,8 +8,10 @@ const flip=(d, a)=>{
    if(d.toLowerCase() === 'l') {
     return a.sort((a,b) => b - a)
    } else {
-    return a.sort()
+    return a.sort((a,b) => a - b)
    }
   }
 
-  flip('L', [3, 2, 1, 2])
+// Best Practice
+
+const flip = (d, a) => a.sort((x, y) => d === 'R' ? x - y : y - x);
