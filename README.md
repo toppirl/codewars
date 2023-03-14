@@ -11,7 +11,7 @@ Everyday, I solve a Codewar!
 
 ## Optimizations
 
-The more Codewar problems I solve, the more i find myself able to optimize the code I have written after solving the problem.
+The more Codewars problems I solve, the more i find myself able to optimize the code I have written after solving the problem.
 
 ## Lessons Learned:
 
