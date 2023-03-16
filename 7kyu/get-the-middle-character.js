@@ -17,3 +17,9 @@
 
 // The middle character(s) of the word represented as a string.
 
+//My solution
+
+function getMiddle(s)
+{
+  //Code goes here!
+}
