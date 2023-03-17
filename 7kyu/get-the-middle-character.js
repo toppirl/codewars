@@ -21,5 +21,7 @@
 
 function getMiddle(s)
 {
-  //Code goes here!
+  if(s.length % 2 === 0) {
+
+  }
 }
