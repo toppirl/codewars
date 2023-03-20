@@ -24,7 +24,7 @@ function getMiddle(s)
   if(s.length % 2 === 0) {
 
   } else {
-    console.log(s[(s.length-1)/2])
+    return s[(s.length-1)/2]
   }
 }
 
