@@ -11,7 +11,16 @@
 
 String.prototype.toJadenCase = function () {
     let newString = this.split(' ')
-    console.log(newString)
+    let jadenString = newString.map((x) => {
+        return x[0].toUpperCase() + x.substring(1)
+    })
+    return jadenString.join(' ')
   };
 
-'help me understand'.toJadenCase()
+// Best Practice
+
+String.prototype.toJadenCase = function () {
+    return this.split(" ").map(function(word){
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(" ");
+  }
