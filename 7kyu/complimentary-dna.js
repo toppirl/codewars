@@ -35,4 +35,4 @@ function DNAStrand(dna){
     return newDna;
   }
 
-  console.log(DNAStrand('ATTGC'))
+// Best Practice
