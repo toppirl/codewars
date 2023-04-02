@@ -35,4 +35,17 @@ function DNAStrand(dna){
     return newDna;
   }
 
-// Best Practice
+// Best Practice 1
+
+function DNAStrand(dna) {
+    return dna.replace(/./g, function(c) {
+      return DNAStrand.pairs[c]
+    })
+  }
+
+  DNAStrand.pairs = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  }
