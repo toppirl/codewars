@@ -35,25 +35,13 @@ function DNAStrand(dna){
     return newDna;
   }
 
-// Best Practice 1
-
-function DNAStrand(dna) {
-    return dna.replace(/./g, function(c) {
-      return DNAStrand.pairs[c]
-    })
-  }
-
-  DNAStrand.pairs = {
-    A: 'T',
-    T: 'A',
-    C: 'G',
-    G: 'C',
-  }
-
-  // Best Practice 2
+  // Best Practice
 
   var pairs = {'A':'T','T':'A','C':'G','G':'C'};
 
 function DNAStrand(dna){
+    // Split the string into an array
+    // Map over array and for each letter return the key value from the pairs object
+    // Map creates a new array that we will join to return the completed assignment
   return dna.split('').map(function(v){ return pairs[v] }).join('');
 }
