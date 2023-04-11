@@ -12,3 +12,9 @@ function removeUrlAnchor(url){
 
  console.log(removeUrlAnchor('www.codewars.com#about'))
  console.log(removeUrlAnchor('www.codewars.com?page=1'))
+
+ //Best Practice
+
+ function removeUrlAnchor(url){
+  return url.split('#')[0];
+}
