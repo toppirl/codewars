@@ -7,13 +7,15 @@
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
 function spinWords(string){
-    return string.split(' ').map(word, () => {
-        if(word.length() >= 5) {
-            return 'bigger'
-        } else {
-            return word;
-        }
-    })
+    return string.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ')
   }
 
-console.log(spinWords('"Hey fellow warriors"'))
+
+
+  // Best Practice
+
+  function spinWords(words){
+    return words.split(' ').map(function (word) {
+      return (word.length > 4) ? word.split('').reverse().join('') : word;
+    }).join(' ');
+  }
