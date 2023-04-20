@@ -10,3 +10,9 @@
 
 
 //My solution
+
+function abbrevName(name){
+
+    // code away
+
+}
