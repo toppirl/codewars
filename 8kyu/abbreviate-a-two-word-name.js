@@ -12,7 +12,6 @@
 //My solution
 
 function abbrevName(name){
-
-    // code away
-
+    nameSplit = (name.split(' '))
+    return(`${nameSplit[0][0]}.${nameSplit[1][0]}`)
 }
