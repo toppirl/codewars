@@ -12,6 +12,6 @@
 //My solution
 
 function abbrevName(name){
-    nameSplit = (name.split(' '))
+    nameSplit = name.toUpperCase().split(' ')
     return(`${nameSplit[0][0]}.${nameSplit[1][0]}`)
 }
