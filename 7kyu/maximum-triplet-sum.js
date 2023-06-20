@@ -23,6 +23,6 @@ function maxTriSum(numbers){
 // Best Practice
 
 const maxTriSum = numbers => {
-    const [a,b,c,...rest] = [...new Set([...numbers])].sort((a,b)=>b-a)
+    const [a,b,c] = [...new Set([...numbers])].sort((a,b)=>b-a)
     return a+b+c
   }
