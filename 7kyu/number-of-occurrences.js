@@ -9,7 +9,7 @@
 // arr.numberOfOccurrences(2) === 2;
 // arr.numberOfOccurrences(3) === 1;
 
-const numberOfOccurances = (e, num) =>  {
+const numberOfOccurrences = (e, num) =>  {
     let count = 0;
     for(let i = 0; i < e.length; i++) {
         console.log(i)
