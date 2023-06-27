@@ -11,7 +11,10 @@ var flatten = function (array){
   }
 
 // Created before the flat() function existed in JavaScript
+// Best Practices
 
   var flatten = function (lol){
     return [].concat.apply([],lol);
   }
+
+  const flatten = (array) => [].concat(...array);
