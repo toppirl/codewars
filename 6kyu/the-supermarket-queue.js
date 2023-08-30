@@ -11,56 +11,63 @@
 
 // Examples
 // queueTime([5,3,4], 1)
-// // should return 12
-// // because when there is 1 till, the total time is just the sum of the times
+// should return 12
+// because when there is 1 till, the total time is just the sum of the times
 
 // queueTime([10,2,3,3], 2)
-// // should return 10
-// // because here n=2 and the 2nd, 3rd, and 4th people in the 
-// // queue finish before the 1st person has finished.
+// should return 10
+// because here n=2 and the 2nd, 3rd, and 4th people in the
+// queue finish before the 1st person has finished.
 
 // queueTime([2,3,10], 2)
 // // should return 12
 
 // Unable to solve
 
+// My solution
+
 function queueTime(customers, n) {
-  
-        // Make an array containing n amount of elements, 
-        // n representing the number of tills, 
-        // and fill with zeroes
-        var tills = new Array(n).fill(0);
-      
-        // Iterate through the customers 
-        for (let time of customers) {
-      
-          // Find the till that has the least time
-          let idx = tills.indexOf(Math.min(...tills));
-      
-          // Add the time, representing the customer to
-          // the till that has the least time
-          tills[idx] += time;
-        }
-      
-        // Return the till that has the longest wait time
-        // This is the required time to get all customers
-        // through the que.
-        return Math.max(...tills);
-      
+  const tills = Array(n).fill(0)
+  for (let i = 0; i < customers.length; i++) {
+    console.log(customers[i])
+    tills[tills.indexOf(Math.min(...tills))] += customers[i]
+  }
+  return tills[tills.indexOf(Math.max(...tills))]
+}
+
+function queueTime(customers, n) {
+  // Make an array containing n amount of elements,
+  // n representing the number of tills,
+  // and fill with zeroes
+  var tills = new Array(n).fill(0)
+
+  // Iterate through the customers
+  for (let time of customers) {
+    // Find the till that has the least time
+    let idx = tills.indexOf(Math.min(...tills))
+
+    // Add the time, representing the customer to
+    // the till that has the least time
+    tills[idx] += time
   }
 
+  // Return the till that has the longest wait time
+  // This is the required time to get all customers
+  // through the que.
+  return Math.max(...tills)
+}
 
-console.log(queueTime([1,2,3,4,5], 2))
+console.log(queueTime([1, 2, 3, 4, 5], 2))
 
 // Best practice #2
 
 function queueTime(customers, n) {
-    let tills = Array(n).fill(0);
-    
-    customers.forEach((customer) => {
-      let nextTill = tills.indexOf(Math.min(...tills))
-      tills[nextTill] += customer;
-    });
-  
-    return Math.max(...tills);
-  }
+  let tills = Array(n).fill(0)
+
+  customers.forEach((customer) => {
+    let nextTill = tills.indexOf(Math.min(...tills))
+    tills[nextTill] += customer
+  })
+
+  return Math.max(...tills)
+}
